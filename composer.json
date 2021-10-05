@@ -1,0 +1,55 @@
+{
+	"name" : "elasticms/admin-bundle",
+	"description" : "The elasticms admin bundle",
+	"type" : "symfony-bundle",
+	"authors" : [
+		{
+			"name" : "Mathieu De Keyzer",
+			"email" : "mathieu@dekeyzer.net"
+		},
+		{
+			"name" : "David Mattei",
+			"email" : "david.mattei@smals.be"
+		},
+		{
+			"name" : "Jerome Coppee",
+			"email" : "jerome.coppee@smals.be"
+		}
+	],
+	"keywords" : [
+		"elasticms", "admin"
+	],
+	"license" : "MIT",
+	"require" : {
+		"php": "^7.4",
+		"symfony/framework-bundle": "^4.4"
+	},
+	"require-dev" : {
+		"friendsofphp/php-cs-fixer" : "^3.0",
+		"phpstan/phpstan": "^0.12",
+		"phpunit/phpunit" : "^9.5",
+		"symfony/test-pack": "^1.0"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"EMS\\AdminBundle\\" : "src/"
+		},
+		"exclude-from-classmap" : [
+			"tests/"
+		]
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"EMS\\CoreBundle\\Tests\\" : "tests/"
+		}
+	},
+	"config": {
+		"lock": false,
+		"sort-packages": true
+	},
+	"scripts": {
+		"phpcs": "php-cs-fixer fix",
+		"phpstan": "phpstan analyse",
+		"phpunit": "phpunit"
+	}
+}
