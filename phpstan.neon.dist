@@ -1,0 +1,6 @@
+parameters:
+    paths:
+        - %currentWorkingDirectory%/src
+    level: 8
+    parallel:
+        maximumNumberOfProcesses: 2
