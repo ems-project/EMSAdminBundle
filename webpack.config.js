@@ -7,10 +7,10 @@ module.exports = {
     plugins: [
         new CopyPlugin([
             {
-                from: './public/assets/images',
+                from: './assets/images',
                 to: 'images'
             }, {
-                from: './public/assets/cke-plugins',
+                from: './assets/cke-plugins',
                 to: 'js/cke-plugins'
             }, {
                 from: './node_modules/ace-builds/src-noconflict',
@@ -44,31 +44,31 @@ module.exports = {
     ],
     context: path.resolve(__dirname, './'),
     entry: {
-        'black': './public/assets/skins/black.js',
-        'black-light': './public/assets/skins/black-light.js',
-        'blue': './public/assets/skins/blue.js',
-        'blue-light': './public/assets/skins/blue-light.js',
-        'green': './public/assets/skins/green.js',
-        'green-light': './public/assets/skins/green-light.js',
-        'purple': './public/assets/skins/purple.js',
-        'purple-light': './public/assets/skins/purple-light.js',
-        'red': './public/assets/skins/red.js',
-        'red-light': './public/assets/skins/red-light.js',
-        'yellow': './public/assets/skins/yellow.js',
-        'yellow-light': './public/assets/skins/yellow-light.js',
-        'app': './public/assets/app.js',
-        'edit-revision': './public/assets/edit-revision.js',
-        'managed-alias': './public/assets/managed-alias.js',
-        'user-profile': './public/assets/user-profile.js',
-        'template': './public/assets/template.js',
-        'hierarchical': './public/assets/hierarchical.js',
-        'calendar': './public/assets/calendar.js',
-        'criteria-view': './public/assets/criteria-view.js',
-        'criteria-table': './public/assets/criteria-table.js',
-        'i18n': './public/assets/i18n.js',
+        'black': './assets/skins/black.js',
+        'black-light': './assets/skins/black-light.js',
+        'blue': './assets/skins/blue.js',
+        'blue-light': './assets/skins/blue-light.js',
+        'green': './assets/skins/green.js',
+        'green-light': './assets/skins/green-light.js',
+        'purple': './assets/skins/purple.js',
+        'purple-light': './assets/skins/purple-light.js',
+        'red': './assets/skins/red.js',
+        'red-light': './assets/skins/red-light.js',
+        'yellow': './assets/skins/yellow.js',
+        'yellow-light': './assets/skins/yellow-light.js',
+        'app': './assets/app.js',
+        'edit-revision': './assets/edit-revision.js',
+        'managed-alias': './assets/managed-alias.js',
+        'user-profile': './assets/user-profile.js',
+        'template': './assets/template.js',
+        'hierarchical': './assets/hierarchical.js',
+        'calendar': './assets/calendar.js',
+        'criteria-view': './assets/criteria-view.js',
+        'criteria-table': './assets/criteria-table.js',
+        'i18n': './assets/i18n.js',
     },
     output: {
-        path: path.resolve(__dirname, 'public/build'),
+        path: path.resolve(__dirname, 'src/Resources/public'),
         filename: 'js/[name].bundle.js',
         //publicPath: '../bundles/emscore/',
     },
@@ -95,18 +95,18 @@ module.exports = {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [{
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            // you can specify a publicPath here
-                            // by default it use publicPath in webpackOptions.output
-                            publicPath: '../'
-                        }
-                    },{
-                        loader: 'css-loader',
-                        options: {
-                            sourceMap: true
-                        }
-                    },
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        // you can specify a publicPath here
+                        // by default it use publicPath in webpackOptions.output
+                        publicPath: '../'
+                    }
+                },{
+                    loader: 'css-loader',
+                    options: {
+                        sourceMap: true
+                    }
+                },
                     // 'postcss-loader',
                     'sass-loader',
                 ],
