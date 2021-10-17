@@ -40,7 +40,7 @@
 	},
 	"autoload-dev" : {
 		"psr-4" : {
-			"EMS\\CoreBundle\\Tests\\" : "tests/"
+			"EMS\\AdminBundle\\Tests\\" : "tests/"
 		}
 	},
 	"config": {
